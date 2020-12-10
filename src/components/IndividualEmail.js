@@ -1,17 +1,17 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
-const IndividualEmail = ({subject,sender, id}) => {
-
+const IndividualEmail = ({allEmails}) => {
 
     return (
-        <div key={id}>
-            <div>
-                {sender}
-            </div>
-            <div>
-                {subject}
-            </div>
+    <div key={allEmails.id}>
+        <div>
+            {allEmails.sender}
         </div>
+        <div>
+            {allEmails.subject}
+        </div>
+    </div>
     )
 }
 
