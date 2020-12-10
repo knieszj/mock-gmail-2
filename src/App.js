@@ -88,6 +88,7 @@ class App extends Component {
         let {setEmailToSendSubject} = this;
         let {setEmailToSendMessage} = this;
         let {sendEmail} = this;
+        let {sender, recipient, subject,message,date,id} = this.state.allEmails
         const navigationBar = () => {
             return (
                 <nav>

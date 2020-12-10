@@ -1,6 +1,7 @@
 import React from 'react'
 import ViewAllEmails from "./ViewAllEmails";
 import IndividualEmail from "./IndividualEmail";
+import IndividualEmailSearch from "./IndividualEmailSearch";
 
 const SearchEmails = ({search, allEmails, searchFilter}) => {
 
@@ -15,7 +16,7 @@ const SearchEmails = ({search, allEmails, searchFilter}) => {
                     email.subject.toLowerCase().includes(search.toLowerCase())) ||
                 email.sender.toLowerCase().includes(search.toLowerCase()) ||
                 email.message.toLowerCase().includes(search.toLowerCase())
-            ).map(email => <IndividualEmail sender={email.sender} subject={email.subject} id={email.id}/> )}
+            ).map(email => <IndividualEmailSearch sender={email.sender} subject={email.subject} id={email.id}/> )}
         </div>
 
     return (
